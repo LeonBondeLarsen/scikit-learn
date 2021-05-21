@@ -997,3 +997,26 @@ class TSNE(BaseEstimator):
         """
         self.fit_transform(X)
         return self
+
+    def transform(self, X, y=None):
+        """ Embed new points in existing model.
+
+        Parameters
+        ----------
+        X : ndarray of shape (n_samples, n_features) or (n_samples, n_samples)
+            If the metric is 'precomputed' X must be a square distance
+            matrix. Otherwise it contains a sample per row. If the method
+            is 'exact', X may be a sparse matrix of type 'csr', 'csc'
+            or 'coo'. If the method is 'barnes_hut' and the metric is
+            'precomputed', X may be a precomputed sparse graph.
+
+        y : Ignored
+
+        Returns
+        -------
+        X_new : ndarray of shape (n_samples, n_components)
+            Embedding of the training data in low-dimensional space.
+        """
+        print("Not yet implemented")
+        return None
+
